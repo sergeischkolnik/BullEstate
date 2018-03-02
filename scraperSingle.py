@@ -4,6 +4,11 @@ import requests
 import csvWrite as ew
 import datetime
 import time
+from xlrd import open_workbook
+import pandas
+
+
+
 
 print(str(datetime.datetime.now()))
 
@@ -261,5 +266,18 @@ while True:
         fileName += '_' + cdate + '_' + ctime
 
         ew.write(master, fileName)
+
+        df = pandas.read_excel(fileName+".xlsx", sheet_name='Sheet1')
+        print (df.columns)
+        values=df['id'].values
+        df=pandas.DataFrame(df,df.index)
+        df.drop(df.columns[[0, 1, 3,4,6,7,8,11,12,13,14]], axis=1, inplace=True)
+
+        print(df)
+
+
+
+
+
     cycle += 1
 
