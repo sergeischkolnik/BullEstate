@@ -11,6 +11,8 @@ plt.rcParams['figure.figsize'] = (16, 9)
 plt.style.use('ggplot')
 import numpy as np
 from copy import deepcopy
+import asyncio
+import aiohttp
 
 
 
@@ -20,13 +22,8 @@ print(str(datetime.datetime.now()))
 step = 1
 
 
-def normalize(v):
-    norm = np.linalg.norm(v, ord=1)
-    if norm == 0:
-        norm = np.finfo(v.dtype).eps
-    return v / norm
 
-def getInfo(subsites,master):
+async def getInfo(subsites,master):
 
     for j in range(0, len(subsites)):
         print(str(subsites[j])+ " page nr:" + str(j+1))
@@ -79,15 +76,13 @@ def getInfo(subsites,master):
                 else:
                     meters = 'missing'
                 if '-' in meters:
-                    try:
-                        meters = meters.split('-')
-                        minMeters = (meters[0])[:-1]
-                        maxMeters = (meters[1])[:-3]
-                        maxMeters = maxMeters[1:]
-                        minMeters = float(minMeters.replace(',','.'))
-                        maxMeters = float(maxMeters.replace(',','.'))
-                    except:
-                        continue
+                    meters = meters.split('-')
+                    minMeters = (meters[0])[:-1]
+                    maxMeters = (meters[1])[:-3]
+                    maxMeters = maxMeters[1:]
+                    minMeters = float(minMeters.replace(',','.'))
+                    maxMeters = float(maxMeters.replace(',','.'))
+
 
                 elif 'missing' in meters:
                     minMeters = -1
@@ -218,6 +213,13 @@ def getInfo(subsites,master):
                 master.append(aux)
             else:
                 print("ERROR")
+'''
+def normalize(v):
+    norm = np.linalg.norm(v, ord=1)
+    if norm == 0:
+        norm = np.finfo(v.dtype).eps
+    return v / norm
+'''
 
 collection = []
 for n1 in ['venta','arriendo']:
@@ -294,7 +296,9 @@ while True:
         promMl = df['promM'].values
         latl = df['lat'].values
         lonl = df['lon'].values
+        cycle+=1
 
+'''
         Precion=normalize(Preciol)
         promMn=normalize(promMl)
         latn=normalize(latl)
@@ -302,10 +306,10 @@ while True:
         print('1')
         print(Precion,promMn,latn,lonn)
         print('1')
+'''
 
 
 
 
-
-    cycle += 1
+    #cycle += 1
 
