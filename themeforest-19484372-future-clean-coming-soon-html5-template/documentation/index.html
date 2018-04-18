@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Future - Documentation</title>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"> 
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/vendor/uikit.min.css">
+        <link rel="stylesheet" href="css/vendor/slideshow.min.css">
+        <link rel="stylesheet" href="css/vendor/dotnav.min.css">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body class="my_body">
+
+        <header>
+            <div class="uk-container-center uk-container">
+                <img src="images/logo.png" alt="Future logo">
+                <h3>Coming Soon Template</h3>
+            </div>
+        </header>
+
+        <div class="uk-container uk-container-center uk-margin-large-bottom">
+
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-medium-1-4 sidebar-menu">
+                    <div data-uk-sticky="{top:20, animation: 'uk-animation-slide-top'}">
+                        <ul class="uk-nav uk-nav-side" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}">
+                            <li class="uk-active"><a href="#getstarted">Get Started Now</a></li>
+                            <li class=""><a href="#folderstructure">Folder Structure</a></li>
+                            <li class=""><a href="#htmlstructure">HTML Page Markup</a></li>
+                            <li class=""><a href="#howtoaddheader">How to Add Header</a></li>
+                            <li class=""><a href="#howtoaddsection">How to Add Section</a></li>
+                            <li class=""><a href="#addcountdown">Add Countdown Timer</a></li>
+                            <li class=""><a href="#addvideoslideshow">Add Video Slideshow</a></li>
+                            <li class=""><a href="#howtoaddcontactform">How to Add Contact Form</a></li>
+                            <li class=""><a href="#sourcecredits">Source And Credits</a></li>
+                            <li class=""><a href="#support">Support Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="uk-width-medium-3-4">
+
+                    <div id="getstarted">
+                        <h1 class="uk-margin-small-bottom">Future - Coming Soon Template</h1>
+                        <p class="uk-text-large uk-margin-top-remove uk-margin-large-bottom">The Documentation<sup>v1.0</sup></p>
+                        <ul class="uk-list uk-list-striped uk-margin-large-top">
+                            <li><strong>Created:</strong> 19 Feb, 2017</li>
+                            <li><strong>By:</strong> thecodrops</li>
+                            <li><strong>Profile:</strong> <a href="http://www.themeforest.net/user/thecodrops?ref=thecodrops" target="_blank">www.themeforest.net/user/thecodrops</a></li>
+                            <li><strong>Email:</strong> mycodrops@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <div id="folderstructure">
+                        <h2>Folder Structure</h2>
+                        <p>Folder structure of the Future - Coming Soon Template. See the attachment for more details</p>
+                        <div class="uk-overflow-container uk-margin-large-bottom">
+                            <table class="uk-table uk-table-striped uk-text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Folder</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>/css</code></td>
+                                        <td>Contains all CSS files.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/images</code></td>
+                                        <td>Contains images files.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/js</code></td>
+                                        <td>Contains all javascript files</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/vendor</code></td>
+                                        <td>Contains all 3rd party files</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <img src="images/folder_structure.jpg" alt="Folder Structure">
+                    </div>
+
+                    <div id="htmlstructure">
+                        <h2>HTML Page Markup</h2>
+                        <p>First off, make sure you have a solid code editor, for example <a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>. You need to add the compiled and preferably <mark>style.css</mark>, <mark>shortcodes.css</mark> & <mark><a href="https://getuikit.com/" target="_blank">uikit.min.css</a></mark> to the header of your HTML5 document. And that's it!</p>
+                        <h3 class="tm-article-subtitle">Example</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">&lt;!DOCTYPE html&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;html</span> <span style="color: #7D9029">lang=</span><span style="color: #BA2121">&quot;zxx&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;head&gt;</span>
+        <span style="color: #408080; font-style: italic">&lt;!-- Meta Character Set --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">charset=</span><span style="color: #BA2121">&quot;utf-8&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;title&gt;</span>Future - Coming Soon HTML5 Template<span style="color: #008000; font-weight: bold">&lt;/title&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Responsive Meta Tag --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">http-equiv=</span><span style="color: #BA2121">&quot;X-UA-Compatible&quot;</span> <span style="color: #7D9029">content=</span><span style="color: #BA2121">&quot;IE=edge&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;viewport&quot;</span> <span style="color: #7D9029">content=</span><span style="color: #BA2121">&quot;width=device-width, initial-scale=1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Meta Description --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;description&quot;</span> <span style="color: #7D9029">content=</span><span style="color: #BA2121">&quot;Future - Coming Soon HTML5 Template&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;keywords&quot;</span> <span style="color: #7D9029">content=</span><span style="color: #BA2121">&quot;responsive, creative, coming soon, html5, css3, under construction, countdown&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;author&quot;</span> <span style="color: #7D9029">content=</span><span style="color: #BA2121">&quot;thecodrops&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Favicon --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;shortcut icon&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;images/logos/favicon.png&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;image/x-icon&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>       
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Google Fonts --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;https://fonts.googleapis.com/css?family=Poppins|Roboto&quot;</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Vendor CSS --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text/css&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;vendor/uikit/css/uikit.min.css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text/css&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;vendor/uikit/css/components/slideshow.min.css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text/css&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;vendor/uikit/css/components/tooltip.min.css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text/css&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;vendor/uikit/css/components/slidenav.min.css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Main CSS --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text/css&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;css/style.css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #7D9029">rel=</span><span style="color: #BA2121">&quot;stylesheet&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text/css&quot;</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;css/shortcodes.css&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!--[if lt IE 9]&gt;</span>
+<span style="color: #408080; font-style: italic">            &lt;script src=&quot;https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span>
+<span style="color: #408080; font-style: italic">            &lt;script src=&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;</span>
+<span style="color: #408080; font-style: italic">        &lt;![endif]--&gt;</span>
+        
+    <span style="color: #008000; font-weight: bold">&lt;/head&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;body&gt;</span>
+
+        Your Section Code Here...
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Jquery js --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;js/jquery.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+       
+        <span style="color: #408080; font-style: italic">&lt;!-- Vendor js --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;vendor/uikit/js/uikit.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;vendor/uikit/js/components/slideshow.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;vendor/uikit/js/components/lightbox.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;vendor/uikit/js/components/grid.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>     
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;vendor/uikit/js/components/tooltip.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>     
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;vendor/countdown/jquery.countdown.min.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Contact Form --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;js/contact.form.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>        
+
+        <span style="color: #408080; font-style: italic">&lt;!-- Scripts Js --&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;script </span><span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;js/scripts.js&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/script&gt;</span>
+       
+    <span style="color: #008000; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/html&gt;</span>
+</pre>
+                    </div>
+
+
+                    <div id="howtoaddheader">
+                        <h2>How to Add Header</h2>
+                        <p>In this step you can learn, how to add header section.</p>
+                        <ol>
+                            <li>At first you showed go your template folder, open your html file on a solid editor.
+                                <img src="images/header-code-preview.jpg" class="uk-margin-top uk-margin-large-bottom">
+                            </li>
+                            <li><p>Copy following code. Paste your actual file.</p>
+                                <h3 class="tm-article-subtitle">Example</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">&lt;!-- Header Start --&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;header</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-header&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;tc-header&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-top-block&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-container uk-container-center&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-logo&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;index.html&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;img</span> <span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;images/logos/logo.png&quot;</span> <span style="color: #7D9029">alt=</span><span style="color: #BA2121">&quot;logo&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-social-share uk-hidden-small&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;#&quot;</span> <span style="color: #7D9029">data-uk-tooltip=</span><span style="color: #BA2121">&quot;{pos:&#39;bottom&#39;}&quot;</span> <span style="color: #7D9029">title=</span><span style="color: #BA2121">&quot;Facebook&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;i</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-icon-facebook&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;#&quot;</span> <span style="color: #7D9029">data-uk-tooltip=</span><span style="color: #BA2121">&quot;{pos:&#39;bottom&#39;}&quot;</span> <span style="color: #7D9029">title=</span><span style="color: #BA2121">&quot;Twitter&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;i</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-icon-twitter&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;#&quot;</span> <span style="color: #7D9029">data-uk-tooltip=</span><span style="color: #BA2121">&quot;{pos:&#39;bottom&#39;}&quot;</span> <span style="color: #7D9029">title=</span><span style="color: #BA2121">&quot;Google Plus&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;i</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-icon-google-plus&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;#&quot;</span> <span style="color: #7D9029">data-uk-tooltip=</span><span style="color: #BA2121">&quot;{pos:&#39;bottom&#39;}&quot;</span> <span style="color: #7D9029">title=</span><span style="color: #BA2121">&quot;Linkedin&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;i</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-icon-linkedin&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/header&gt;</span>
+<span style="color: #408080; font-style: italic">&lt;!-- Header End --&gt;</span>
+</pre>   
+                            </li>
+                            <li>
+                                <p>Finally save it and reload your browser.</p>
+                                <h3 class="tm-article-subtitle">Desktop Preview</h3>
+                                <img src="images/header-preview.jpg" class="uk-margin-top">
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="howtoaddsection">
+                        <h2>How to Add Section</h2>
+                        <p>Hello sir, in the documentation we show you how to add section in your page.</p>
+                        <ol>
+                            <li>At first you need to open  index.html file on a solid code editor. then scroll down and go code section. You can edit or customize as you need.
+                                <img src="images/section-code-preview.jpg" class="uk-margin-top uk-margin-large-bottom">                               
+                            </li>
+                            <li><p>Section code structure same as following code.</p>
+                                <h3 class="tm-article-subtitle">Example</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">&lt;!-- Main Start --&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;main</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-main&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;tc-main&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #408080; font-style: italic">&lt;!-- Section Start--&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;section</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;sectionclass&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;sectionid&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        Your Section Content Here
+    <span style="color: #008000; font-weight: bold">&lt;/section&gt;</span>
+    <span style="color: #408080; font-style: italic">&lt;!-- Section End--&gt;</span>
+    .
+    .
+    .
+<span style="color: #008000; font-weight: bold">&lt;/main&gt;</span>
+<span style="color: #408080; font-style: italic">&lt;!-- Main End --&gt;</span>
+</pre>
+                            </li>
+                            <li>
+                                Finally save it and reload your browser.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="addcountdown">
+                        <h2>How to Add Countdown Timer</h2>
+                        <p>Hello sir, in the documentation we show you how to add countdown timer in your page.</p>
+                        <ol>
+                            <li>At first you need to link countdown js file on your html file.
+                                <img src="images/countdown-js-link.jpg" class="uk-margin-top uk-margin-large-bottom">                         
+                            </li>
+                            <li>Now add jquery ready function code for countdown timer.
+                                <img src="images/countdown-ready-function.jpg" class="uk-margin-top uk-margin-large-bottom">                             
+                            </li>
+                            <li>In this step please add your contdown code on your html file.
+                                <img src="images/countdown-html-code.jpg" class="uk-margin-top uk-margin-large-bottom">                               
+                            </li>
+                            <li><p>Get countdown code here.</p>
+                                <h3 class="tm-article-subtitle">Example</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-count-down uk-contrast&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+</pre>
+                            </li>
+                            <li>
+                                Finally save it and reload your browser.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="addvideoslideshow">
+                        <h2>How to Add Video Slideshow</h2>
+                        <p>Hello sir, in the documentation we show you how to add video slideshow in your page.</p>
+                        <ol>
+                            <li>At first you need to open  index-video.html file on a solid code editor. then scroll down and go code section. You can edit or customize as you need.
+                                <img src="images/video-slider-code-preview.jpg" class="uk-margin-top uk-margin-large-bottom">                               
+                            </li>
+                            <li><p>Get video slideshow code here.</p>
+                                <h3 class="tm-article-subtitle">Example</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">&lt;!-- Slider Start --&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-slider&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;tc-slider&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-slidenav-position&quot;</span> <span style="color: #7D9029">data-uk-slideshow=</span><span style="color: #BA2121">&quot;{animation: &#39;swipe&#39;, autoplay: true}&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;ul</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-slideshow uk-overlay-active uk-slideshow-fullscreen&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;li&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;video</span> <span style="color: #7D9029">autoplay</span> <span style="color: #7D9029">loop</span> <span style="color: #7D9029">muted</span> <span style="color: #7D9029">controls</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;source</span> <span style="color: #7D9029">src=</span><span style="color: #BA2121">&quot;https://0.s3.envato.com/h264-video-previews/c9ef627d-af0f-4593-b539-0448708ef1d6/8542323.mp4&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;video/mp4&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;/video&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-overlay-panel uk-flex uk-flex-center uk-text-center uk-flex-middle uk-container uk-container-center&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;h3</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;sldr-title-large white-color bold-font&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>GET <span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;gray-color&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>READY<span style="color: #008000; font-weight: bold">&lt;/span&gt;</span> TO <span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;gray-color&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>LAUNCH<span style="color: #008000; font-weight: bold">&lt;/span&gt;&lt;/h3&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;p</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;sldr-para25 white-color mt20 mb60&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>We&#39;re coming soon! We&#39;re working hard to <span style="color: #008000; font-weight: bold">&lt;br&gt;</span>give you the best experience!<span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-count-down uk-contrast&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;/li&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;/ul&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;down-arrow pulse-infinite&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #7D9029">href=</span><span style="color: #BA2121">&quot;#tc-services&quot;</span> <span style="color: #7D9029">data-uk-smooth-scroll=</span><span style="color: #BA2121">&quot;{offset: 0}&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;i</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-icon-long-arrow-down&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/i&gt;&lt;/a&gt;</span>                    
+        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #408080; font-style: italic">&lt;!-- Slider End --&gt;</span>
+</pre>
+                            </li>
+                            <li>
+                                Finally save it and reload your browser.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="howtoaddcontactform">
+                        <h2>How to Add Contact Form</h2>
+                        <p>Hello sir, in the documentation we show you how to add contact form in your page.</p>
+                        <ol>
+                            <li>At first you need to link contact.form.js script in your html file.
+                                <img src="images/contact-form-add-script.jpg" class="uk-margin-top uk-margin-large-bottom">                               
+                            </li>
+                            <li>Now you need to open index.html file on a solid code editor. then scroll down and go code section. You can edit or customize as you need.
+                                <img src="images/contact-form-code-html-preview.jpg" class="uk-margin-top uk-margin-large-bottom">
+                                <p>You can copy following code.</p>
+                                <h3 class="tm-article-subtitle">Contact Form Code</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">&lt;!-- Bottom b Start --&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;section</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;tc-bottom&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;tc-contact&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-container uk-container-center&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-grid&quot;</span> <span style="color: #7D9029">data-uk-grid-margin=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-medium-1-1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;h1</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;title1 title-center&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Contact With Me!<span style="color: #008000; font-weight: bold">&lt;/h1&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;p</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-text-center&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <span style="color: #008000; font-weight: bold">&lt;br&gt;</span>sed do eiusmod
+                tempor incididunt ut labore et sint.<span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;spacer2&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;form-messages&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/div&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;form</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-form contact-form&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;contact-form&quot;</span> <span style="color: #7D9029">method=</span><span style="color: #BA2121">&quot;post&quot;</span> <span style="color: #7D9029">action=</span><span style="color: #BA2121">&quot;mailer.php&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-grid&quot;</span> <span style="color: #7D9029">data-uk-grid-margin=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1 uk-width-medium-1-2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-form-controls&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                                <span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text&quot;</span> <span style="color: #7D9029">placeholder=</span><span style="color: #BA2121">&quot;Name&quot;</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;name&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;name&quot;</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1 uk-form-large&quot;</span> <span style="color: #7D9029">required</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1 uk-width-medium-1-2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-form-controls&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                                <span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;email&quot;</span> <span style="color: #7D9029">placeholder=</span><span style="color: #BA2121">&quot;Email&quot;</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;email&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;email&quot;</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1 uk-form-large&quot;</span> <span style="color: #7D9029">required</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-grid&quot;</span> <span style="color: #7D9029">data-uk-grid-margin=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-form-controls&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                                <span style="color: #008000; font-weight: bold">&lt;input</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;text&quot;</span> <span style="color: #7D9029">placeholder=</span><span style="color: #BA2121">&quot;Subject&quot;</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;subject&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;subject&quot;</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1 uk-form-large&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-grid&quot;</span> <span style="color: #7D9029">data-uk-grid-margin=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-form-controls&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                                <span style="color: #008000; font-weight: bold">&lt;textarea</span> <span style="color: #7D9029">placeholder=</span><span style="color: #BA2121">&quot;Your Message&quot;</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;message&quot;</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;message&quot;</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1&quot;</span> <span style="color: #7D9029">cols=</span><span style="color: #BA2121">&quot;100&quot;</span> <span style="color: #7D9029">rows=</span><span style="color: #BA2121">&quot;8&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/textarea&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-grid uk-text-center&quot;</span> <span style="color: #7D9029">data-uk-grid-margin=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-width-1-1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;uk-form-controls&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+                                <span style="color: #008000; font-weight: bold">&lt;button</span> <span style="color: #7D9029">class=</span><span style="color: #BA2121">&quot;readon pill&quot;</span> <span style="color: #7D9029">type=</span><span style="color: #BA2121">&quot;submit&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Send Message<span style="color: #008000; font-weight: bold">&lt;/button&gt;</span>
+                            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+                <span style="color: #008000; font-weight: bold">&lt;/form&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+        <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/section&gt;</span>
+<span style="color: #408080; font-style: italic">&lt;!-- Bottom b End --&gt;</span>
+</pre>                               
+                            </li>
+                            <li>
+                                Make mailer.php file
+                                <img src="images/contact-form-code-mailer-php.jpg" class="uk-margin-top uk-margin-large-bottom">
+                                <p>You can copy following code.</p>
+                                <h3 class="tm-article-subtitle">mailer.php File Code</h3>
+<pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">&lt;?php</span>
+<span style="color: #BC7A00">    // Only process POST reqeusts.</span>
+<span style="color: #BC7A00">    if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) {</span>
+<span style="color: #BC7A00">        // Get the form fields and remove whitespace.</span>
+<span style="color: #BC7A00">        $name = strip_tags(trim($_POST[&quot;name&quot;]));</span>
+<span style="color: #BC7A00">               $name = str_replace(array(&quot;\r&quot;,&quot;\n&quot;),array(&quot; &quot;,&quot; &quot;),$name);</span>
+<span style="color: #BC7A00">        $email = filter_var(trim($_POST[&quot;email&quot;]), FILTER_SANITIZE_EMAIL);</span>
+<span style="color: #BC7A00">        $message = trim($_POST[&quot;message&quot;]);</span>
+
+<span style="color: #BC7A00">        // Check that data was sent to the mailer.</span>
+<span style="color: #BC7A00">        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {</span>
+<span style="color: #BC7A00">            // Set a 400 (bad request) response code and exit.</span>
+<span style="color: #BC7A00">            http_response_code(400);</span>
+<span style="color: #BC7A00">            echo &quot;Oops! There was a problem with your submission. Please complete the form and try again.&quot;;</span>
+<span style="color: #BC7A00">            exit;</span>
+<span style="color: #BC7A00">        }</span>
+
+<span style="color: #BC7A00">        // Set the recipient email address.</span>
+<span style="color: #BC7A00">        // FIXME: Update this to your desired email address.</span>
+<span style="color: #BC7A00">        $recipient = &quot;urmail@webmail.com&quot;;</span>
+
+<span style="color: #BC7A00">        // Set the email subject.</span>
+<span style="color: #BC7A00">        $subject = &quot;New contact from $name&quot;;</span>
+
+<span style="color: #BC7A00">        // Build the email content.</span>
+<span style="color: #BC7A00">        $email_content = &quot;Name: $name\n&quot;;</span>
+<span style="color: #BC7A00">        $email_content .= &quot;Email: $email\n\n&quot;;</span>
+<span style="color: #BC7A00">        $email_content .= &quot;Message:\n$message\n&quot;;</span>
+
+<span style="color: #BC7A00">        // Build the email headers.</span>
+<span style="color: #BC7A00">        $email_headers = &quot;From: $name &lt;$email&gt;&quot;;</span>
+
+<span style="color: #BC7A00">        // Send the email.</span>
+<span style="color: #BC7A00">        if (mail($recipient, $subject, $email_content, $email_headers)) {</span>
+<span style="color: #BC7A00">            // Set a 200 (okay) response code.</span>
+<span style="color: #BC7A00">            http_response_code(200);</span>
+<span style="color: #BC7A00">            echo &quot;Thank You! Your message has been sent.&quot;;</span>
+<span style="color: #BC7A00">        } else {</span>
+<span style="color: #BC7A00">            // Set a 500 (internal server error) response code.</span>
+<span style="color: #BC7A00">            http_response_code(500);</span>
+<span style="color: #BC7A00">            echo &quot;Oops! Something went wrong and we couldn&#39;t send your message.&quot;;</span>
+<span style="color: #BC7A00">        }</span>
+
+<span style="color: #BC7A00">    } else {</span>
+<span style="color: #BC7A00">        // Not a POST request, set a 403 (forbidden) response code.</span>
+<span style="color: #BC7A00">        http_response_code(403);</span>
+<span style="color: #BC7A00">        echo &quot;There was a problem with your submission, please try again.&quot;;</span>
+<span style="color: #BC7A00">    }</span>
+
+<span style="color: #BC7A00">?&gt;</span>
+</pre>
+
+                            </li>
+                            <li>
+                                Finally save it and reload your browser.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div id="sourcecredits" class="uk-margin-large-bottom">
+                        <h2>Source And Creadits</h2>
+                        <p>A big thanks to following source. Future template wouldn't be possible without these source.</p>
+                        <ul>
+                            <li>
+                                <a href="https://getuikit.com/" target="_blank">Uikit Framework</a>
+                            </li>
+                            <li>
+                                <a href="http://fontawesome.io/" target="_blank">FontAwesome</a>
+                            </li>
+                            <li>
+                                <a href="https://jquery.com/" target="_blank">jQuery</a>
+                            </li>
+                            <li>
+                                <a href="http://thestocks.im/" target="_blank">Photos Collection</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="support">
+                        <h2>Support Policy</h2>
+                        <p>Dear sir, if you face problems with the installation or customization of our product please feel free to contact with us. We will try best support for you!.</p>
+                        <p>
+                            <strong>Email:</strong> mycodrops@gmail.com
+                        </p>
+                    </div>
+
+                    <div class="welcome">
+                        <p>Thanks for purchase Future Template, Please Rate 5-Star :)</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- js -->
+        <script src="js/jquery.js"></script>
+        <script src="js/vendor/uikit.min.js"></script>
+        <script src="js/vendor/sticky.js"></script>
+        <script src="js/vendor/slideshow.min.js"></script>
+    </body>
+</html>

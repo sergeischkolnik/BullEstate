@@ -1,0 +1,54 @@
+First of all I would like to thank you for your purchase! You are the best!
+
+/* future
+---------------------------------------------------------- */
+
+Main folder of the future template . Just copy this folder & paste your directory.
+
+
+/* Folder overview	
+----------------------- */
+	
+   /css: contain all css files
+
+   /js: contain all js files.
+
+   /vendor: contain all vendor files.
+
+   /images: contain image files.
+
+
+/* documentation
+---------------------------------------------------------- */
+
+Future template documentation is also available. To view it, navigate to the documentation folder and double click index.html file. You can learn more about the template from documentation.
+
+
+/* Source And Credits
+---------------------------------------------------------- */
+
+A big thanks to following source. Future template wouldn't be possible without these source.
+
+=> https://getuikit.com/ (Uikit Framework)
+
+=> http://fontawesome.io/ (FontAwesome)
+
+=> http://jquery.com/ (jQuery)
+
+=> http://thestocks.im/
+
+=> https://fonts.google.com/ (Google Free Fonts)
+
+
+/* Support
+--------------------------------------------------------- */
+
+Dear Sir, If you face installation and customization related problem. so, feel free to contact with us.
+
+Email: mycodrops@gmail.com
+
+
+Good Luck!
+
+
+Please 5-Star Rate Our Product :)
