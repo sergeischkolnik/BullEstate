@@ -232,13 +232,13 @@ def getInfo(subsites,master):
             #print(str(time.time() - startTime) + ": Done")
 
 collection = []
-for n1 in ['venta']:
+for n1 in ['venta','arriendo']:
     #'casa','departamento','oficina','sitio','comercial','agricola','loteo','bodega','parcela','estacionamiento','terreno-en-construcción'
     for n2 in ['departamento','casa']:
-        #for n3 in ['arica-y-parinacota','tarapaca','antofagasta','atacama','coquimbo',
-         #          'bernardo-ohiggins','maule','biobio','la-araucania','de-los-rios','los-lagos','aysen',
-          #         'magallanes-y-antartica-chilena','valparaiso','metropolitana']:
-        for n3 in ['arica-y-parinacota']:
+        for n3 in ['arica-y-parinacota','tarapaca','antofagasta','atacama','coquimbo',
+                   'bernardo-ohiggins','maule','biobio','la-araucania','de-los-rios','los-lagos','aysen',
+                   'magallanes-y-antartica-chilena','valparaiso','metropolitana']:
+        #for n3 in ['arica-y-parinacota']:
             collection.append("http://www.portalinmobiliario.com/"+n1+"/"+n2+"/"+n3+"?tp=6&op=2&ca=3&ts=1&dd=0&dh=6&bd=0&bh=6&or=&mn=1&sf=0&sp=0&pg=1")
 
 cycle = 0
