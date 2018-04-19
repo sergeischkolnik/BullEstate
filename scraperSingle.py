@@ -11,6 +11,7 @@ plt.rcParams['figure.figsize'] = (16, 9)
 plt.style.use('ggplot')
 import numpy as np
 from copy import deepcopy
+import models
 
 
 
@@ -19,6 +20,7 @@ print(str(datetime.datetime.now()))
 
 step = 1
 
+startTime = time.time()
 
 def normalize(v):
     norm = np.linalg.norm(v, ord=1)
@@ -29,14 +31,17 @@ def normalize(v):
 def getInfo(subsites,master):
 
     for j in range(0, len(subsites)):
-        print(str(subsites[j])+ " page nr:" + str(j+1))
+        print(str(time.time()-startTime)+":" + str(subsites[j])+ " page nr:" + str(j+1))
         try:
+            #print(str(time.time() - startTime) + ": getting subsite")
             page2 = requests.get(subsites[j], allow_redirects=True)
+            #print(str(time.time() - startTime) + ": getting tree")
             tree2 = html.fromstring(page2.content)
         except:
             print("Many requests error.")
         lastRange = 25
         for i in range(1,lastRange+3):
+           # print(str(time.time() - startTime) + ": parsing basic data")
             codeSite =  '//*[@id="wrapper"]/section[2]/div/div/div[1]/article/div[3]/div[' + str(i) + ']/div[2]/div/div[1]/p[2]'
             nameSite =  '//*[@id="wrapper"]/section[2]/div/div/div[1]/article/div[3]/div[' + str(i) + ']/div[2]/div/div[1]/h4/a'
             priceSite = '//*[@id="wrapper"]/section[2]/div/div/div[1]/article/div[3]/div[' + str(i) + ']/div[2]/div/div[2]/p/span'
@@ -94,7 +99,10 @@ def getInfo(subsites,master):
                     maxMeters = -1
                 else:
                     meters = meters[:-3]
-                    meters = float(meters.replace(',','.'))
+                    try:
+                        meters = float(meters.replace(',','.'))
+                    except:
+                        continue
                     minMeters = meters
                     maxMeters = meters
                 meanMeters = (minMeters+maxMeters)/2.0
@@ -102,12 +110,14 @@ def getInfo(subsites,master):
                 type = type[0].text
                 type=type[:-1]
                 try:
+                   # print(str(time.time() - startTime) + ": Getting microsite")
                     page3 = requests.get(newLink, allow_redirects=True)
+                   # print(str(time.time() - startTime) + ": Getting tree")
                     tree3 = html.fromstring(page3.content)
                 except:
                     print("Request error")
                 print(str(subsites[j]) + " " + str(j+1) + "." + str(i))
-
+              #  print(str(time.time() - startTime) + ": Parsing microsite")
                 addresSite = '//*[@id="wrapper"]/section/div/div/div[1]/article/div/div[2]/div[1]/div[2]/div[1]/div/div/p[3]/span[1]'
                 address = tree3.xpath(addresSite)
                 if len(address) == 0:
@@ -201,6 +211,7 @@ def getInfo(subsites,master):
 
                 pxm=float(price/minMeters)
 
+                #print(str(time.time() - startTime) + ": Creating tuple")
                 aux.append(name)
                 aux.append(price)
                 aux.append(minMeters)
@@ -218,13 +229,16 @@ def getInfo(subsites,master):
                 master.append(aux)
             else:
                 print("ERROR")
+            #print(str(time.time() - startTime) + ": Done")
 
 collection = []
-for n1 in ['venta','arriendo']:
+for n1 in ['venta']:
     #'casa','departamento','oficina','sitio','comercial','agricola','loteo','bodega','parcela','estacionamiento','terreno-en-construcción'
     for n2 in ['departamento','casa']:
-        #for n3 in ['arica-y-parinacota','metropolitana','tarapaca','antofagasta','atacama','coquimbo','bernardo-ohiggins','maule','biobio','la-araucania','de-los-rios','los-lagos','aysen','magallanes-y-antartica-chilena','valparaiso']:
-        for n3 in ['valparaiso']:
+        #for n3 in ['arica-y-parinacota','tarapaca','antofagasta','atacama','coquimbo',
+         #          'bernardo-ohiggins','maule','biobio','la-araucania','de-los-rios','los-lagos','aysen',
+          #         'magallanes-y-antartica-chilena','valparaiso','metropolitana']:
+        for n3 in ['arica-y-parinacota']:
             collection.append("http://www.portalinmobiliario.com/"+n1+"/"+n2+"/"+n3+"?tp=6&op=2&ca=3&ts=1&dd=0&dh=6&bd=0&bh=6&or=&mn=1&sf=0&sp=0&pg=1")
 
 cycle = 0
@@ -272,35 +286,36 @@ while True:
         fileName = fileName[3]+'_'+fileName[4]+'_'+fileName[5]
 
         master = []
-        titles = ["id", "Nombre", "Precio", "minMet", "maxMet", "promM","Precio/m2", "direc" ,"tipo", "lat", "lon", "dorms", "banios", "fecha", "link"]
-        master.append(titles)
+        #titles = ["id", "Nombre", "Precio", "minMet", "maxMet", "promM","Precio/m2", "direc" ,"tipo", "lat", "lon", "dorms", "banios", "fecha", "link"]
+        #master.append(titles)
 
         getInfo(subsites, master)
         ctime = time.strftime("%H_%M")
         cdate = time.strftime("%Y_%m_%d")
         fileName += '_' + cdate + '_' + ctime
 
-        ew.write(master, fileName)
+        models.save(master)
+        #ew.write(master, fileName)
 
-        df = pandas.read_excel(fileName+".xlsx", sheet_name='Sheet1')
-        print (df.columns)
-        values=df['id'].values
-        df=pandas.DataFrame(df,df.index)
-        df.drop(df.columns[[0, 1, 3,4,6,7,8,11,12,13,14]], axis=1, inplace=True)
-
-        print(df)
-
-        Preciol = df['Precio'].values
-        promMl = df['promM'].values
-        latl = df['lat'].values
-        lonl = df['lon'].values
-
-        Precion=normalize(Preciol)
-        promMn=normalize(promMl)
-        latn=normalize(latl)
-        lonn=normalize(lonl)
+        # df = pandas.read_excel(fileName+".xlsx", sheet_name='Sheet1')
+        # print (df.columns)
+        # values=df['id'].values
+        # df=pandas.DataFrame(df,df.index)
+        # df.drop(df.columns[[0, 1, 3,4,6,7,8,11,12,13,14]], axis=1, inplace=True)
+        #
+        # print(df)
+        #
+        # Preciol = df['Precio'].values
+        # promMl = df['promM'].values
+        # latl = df['lat'].values
+        # lonl = df['lon'].values
+        #
+        # Precion=normalize(Preciol)
+        # promMn=normalize(promMl)
+        # latn=normalize(latl)
+        # lonn=normalize(lonl)
         print('1')
-        print(Precion,promMn,latn,lonn)
+        # print(Precion,promMn,latn,lonn)
         print('1')
 
 
