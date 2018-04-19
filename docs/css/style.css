@@ -1,0 +1,666 @@
+@charset "utf-8";
+
+/**
+*
+* -------------------------------------------------
+*
+* Template : Future - Coming Soon HTML5 Template
+* Author : thecodrops
+* Author URI : http://thecodrops.com
+*
+* --------------------------------------------------
+*
+**/
+
+/* Table Of Content
+-----------------------------------------------------
+01. Common Styles
+02. Global classes
+    02.1 Button
+    02.2 Title
+03. Uikit overide
+04. Header
+    04.1 Navbar
+    04.2 Offcanvas Menu
+05. Slider
+06. Side Menu
+07. Bottom
+08. footer
+09. Countdown Timer
+11. Responsive Media
+-----------------------------------------------------
+*/
+
+/*-----------------------------------
+    01. Common Styles              
+-------------------------------------*/
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+}
+p {
+    color: #797979;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    line-height: 26px;
+    font-size: 15px;
+}
+.clr {
+    clear: both
+}
+section {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*-------------------------
+    02. Global classes
+---------------------------*/
+.sec-color {
+    background-color: #f9f9f9;
+}
+.bg-white {
+    background-color: #fff;
+}
+.bg-white-transparent {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.bg-gray {
+    background-color: #f3f3f3;
+}
+.white-color {
+    color: white !important;
+}
+.gray-color {
+    color: #f5f5f5 !important;
+}
+.sec-spacer {
+    padding: 100px 0;
+}
+.spacer1 {
+    height: 20px;
+}
+.spacer2 {
+    height: 45px;
+}
+.spacer3 {
+    height: 60px;
+}
+.spacer4 {
+    height: 80px;
+}
+.no-margin {
+    margin: 0 !important;
+}
+.mt10 {
+    margin-top: 10px !important;
+}
+.mt15 {
+    margin-top: 15px !important;
+}
+.mt20 {
+    margin-top: 20px !important;
+}
+.mt25 {
+    margin-top: 25px !important;
+}
+.mt30 {
+    margin-top: 30px !important;
+}
+.mt45 {
+    margin-top: 45px !important;
+}
+.mt60 {
+    margin-top: 60px !important;
+}
+.mt80 {
+    margin-top: 80px !important;
+}
+.mt100 {
+    margin-top: 100px !important;
+}
+.mb10 {
+    margin-bottom: 10px !important;
+}
+.mb15 {
+    margin-bottom: 15px !important;
+}
+.mb20 {
+    margin-bottom: 20px !important;
+}
+.mb25 {
+    margin-bottom: 25px !important;
+}
+.mb30 {
+    margin-bottom: 30px !important;
+}
+.mb40 {
+    margin-bottom: 40px !important;
+}
+.mb45 {
+    margin-bottom: 45px !important;
+}
+.mb60 {
+    margin-bottom: 60px !important;
+}
+.mb80 {
+    margin-bottom: 80px !important;
+}
+.mb100 {
+    margin-bottom: 100px !important;
+}
+.scroll-bottom {
+    display: inline-block;
+    border: 1px solid #ddd;
+    height: 70px;
+    width: 70px;
+    font-size: 26px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/*--------------------------
+    2.1 Button
+---------------------------*/
+.readon {
+    position: relative;
+    background: transparent;
+    text-align: center;
+    min-width: 150px;
+    padding: 10px 20px;
+    font-size: 14px;
+    display: inline-block;
+    z-index: 1;
+    border: 1px solid #232323;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #444;
+}
+.readon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 1, 1);
+    transform: scale3d(0.7, 1, 1);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, background .4s;
+    transition: transform 0.4s, opacity 0.4s, background .4s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.readon,
+.readon:before {
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.readon:hover {
+    color: #fff;
+    border-color: #232323;
+    text-decoration: none;
+}
+.readon:hover:before {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.readon.white {
+    color: #fff;
+    border-color: #fff;
+}
+.readon.white:hover {
+    color: #999;
+}
+.readon.white:hover:before {
+    background: #fff;
+}
+.readon.pill {
+    border-radius: 40px;
+}
+.readon.pill:before {
+    border-radius: 40px;
+}
+
+/*--------------------------
+    2.2 Title
+---------------------------*/
+.title1 {
+    position: relative;
+    padding-bottom: 15px;
+    text-rendering: optimizeLegibility;
+}
+.title1:before {
+    position: absolute;
+    content: '';
+    background: #444;
+    bottom: -2px;
+    height: 1px;
+    width: 50px;
+}
+.title-center {
+    text-align: center;
+}
+.title-center:before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/*-------------------------
+    03. Uikit overide
+---------------------------*/
+.tc-dotnav>* {
+    padding-left: 10px;
+}
+.tc-dotnav>*>* {
+    width: 8px;
+    height: 8px;
+    border-radius: 6px;
+    -webkit-transition: all .3s cubic-bezier(0.76, 0.29, 0.77, 0.3);
+    transition: all .3s cubic-bezier(0.76, 0.29, 0.77, 0.3);
+}
+.tc-dotnav.tc-dotnav>*>:active,
+.tc-dotnav>.uk-active>* {
+    width: 30px;
+}
+.has-caption.uk-progress {
+    overflow: visible;
+    margin: 35px 0px;
+}
+.has-caption .uk-progress-bar {
+    position: relative;
+}
+.has-caption .uk-progress-bar > span {
+    position: absolute;
+    top: -24px;
+    color: #444;
+}
+.has-caption .uk-progress-bar > span.name {
+    left: 0;
+}
+.has-caption .uk-progress-bar > span.percent {
+    right: 0;
+}
+.uk-navbar-brand,
+.uk-navbar-content,
+.uk-navbar-toggle {
+    height: 80px;
+}
+.uk-modal-dialog-lightbox .uk-modal-caption {
+    bottom: 0;
+    margin-bottom: 0;
+    background: rgba(240, 240, 240, 0.7);
+    color: #222;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.uk-modal-dialog .uk-close {
+    color: rgba(0, 0, 0, 0.7) !important;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0 !important;
+    right: 0 !important;
+    border-radius: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.uk-slidenav-position {
+    overflow: hidden;
+}
+.uk-slidenav-position .uk-slidenav {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+}
+.uk-slidenav-position .uk-slidenav:before {
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    font-size: 36px;
+    top: 30px;
+}
+.uk-slidenav-position .uk-slidenav:after {
+    position: absolute;
+    content: '';
+    background-color: rgba(22, 22, 22, 0.65);
+    width: 100px;
+    height: 100px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.uk-slidenav-position .uk-slidenav-previous:after {
+    left: -70px;
+    border-radius: 0 20px 0 0;
+}
+.uk-slidenav-position .uk-slidenav-next:after {
+    right: -70px;
+    border-radius: 0 0 0 20px;
+}
+.uk-slidenav-position .uk-slidenav:hover::after {
+    background-color: rgba(22, 22, 22, 0.8);
+}
+.uk-slidenav-position .uk-slidenav:hover::before {
+    color: #ccc;
+}
+
+/*--------------------------
+    04. Header
+---------------------------*/
+.tc-header {
+    position: absolute !important;
+    max-width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.tc-header .tc-logo {
+    line-height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    float: left;
+}
+.tc-header .tc-social-share {
+    float: right;
+    height: 80px;
+    line-height: 80px;
+}
+.tc-header .tc-social-share a {
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    margin-left: 10px;
+}
+.tc-header .tc-social-share a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/*--------------------------
+    05. Slider
+---------------------------*/
+.tc-slider {
+    overflow: hidden;
+}
+.sldr-title-xlarge {
+    font-size: 94px;
+    line-height: 1.4;
+}
+.sldr-title-large {
+    font-size: 64px;
+    line-height: 1.3;
+}
+.sldr-para25 {
+    font-size: 25px;
+    line-height: normal;
+}
+.sldr-title-medium {
+    font-size: 36px;
+    line-height: normal;
+}
+.tc-slider .readon.large {
+    padding: 20px 26px;
+    font-size: 18px;
+}
+.tc-slider .down-arrow {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    margin-left: -35px;
+    -webkit-animation-name: uk-fade-top; 
+    -webkit-animation-duration: 1.6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: uk-fade-top;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+}
+.tc-slider .down-arrow a {
+    color: rgba(255, 255, 255, 0.35);
+    display: block;
+    z-index: 1;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+/*--------------------------
+    06. Side Menu
+---------------------------*/
+.side-menu {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 11;
+}
+
+/*-------------------------
+    07. Bottom
+---------------------------*/
+.tc-bottom {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.tc-bottom .contact-form input[type="text"],
+.tc-bottom .contact-form input[type="email"],
+.tc-bottom .contact-form textarea {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-color: transparent;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    height: 50px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    font-size: 15px;
+    padding: 14px 25px;
+    border-radius: 30px;
+}
+.contact-form textarea {
+    border-radius: 10px;
+}
+.tc-bottom .contact-form .readon:hover {
+    background: #444;
+    border-color: #444;
+}
+.contact-form .readon {
+    height: 44px;
+    min-width: 160px;
+    cursor: pointer;
+}
+.tc-bottom button {
+    cursor: pointer;
+    outline: none;
+}
+#form-messages {
+    font-size: 16px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+#form-messages.success {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+#form-messages.error {
+    margin-bottom: 20px;
+    color: #ff5252;
+}
+.tc-bottom .contact-info {
+    font-size: 14px;
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 10px;
+    color: #777;
+}
+.tc-bottom .contact-info li + li {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tc-bottom .contact-info li i {
+    font-size: 16px;
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 30px;
+    text-align: center;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    padding-left: 2px;
+}
+.tc-bottom .contact-info li:hover i {
+    background-color: #232323;
+    border-color: #232323;
+    color: #fff;
+}
+.tc-bottom .contact-info li a {
+    color: #777;
+}
+.tc-bottom .contact-info-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 0; 
+}
+
+/*--------------------------
+    08. footer
+---------------------------*/
+.tc-footer {
+    position: relative;
+    background-color: #1a1a1a;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 12px;
+}
+.tc-footer .copyright {
+    color: rgba(255,255,255,.7);
+}
+.tc-footer .uk-subnav > * {
+    margin-top: 0;
+}
+.tc-footer .uk-subnav a {
+    color: rgba(255,255,255,.7);
+}
+.tc-footer .uk-subnav a:hover,
+.tc-footer .uk-subnav a:active,
+.tc-footer .uk-subnav a:focus {
+    color: #ccc;
+    text-decoration: underline !important;
+}
+.tc-footer .tc-totopscroll {
+    position: absolute;
+    z-index: 11;
+    top: -16px;
+    left: 50%;
+    height: 42px;
+    width: 42px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    color: rgba(255,255,255,.7);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.tc-footer .tc-totopscroll:hover {
+    line-height: 32px;
+}
+.tc-footer .tc-totopscroll i {
+    margin-left: 2px;
+}
+
+/*--------------------------
+    09. Countdown Timer
+---------------------------*/
+.tc-count-down .c-grid {
+    display: inline-block;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px 3px;
+    border-radius: 4px;
+    min-width: 120px;
+}
+.tc-count-down .c-value {
+    display: block;
+    line-height: 1;
+    font-size: 36px;
+    margin-bottom: 7px;
+}
+.tc-count-down .c-title {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/*-----------------------------
+    11. Responsive Media
+-------------------------------*/
+@media (min-width: 960px) {
+    .uk-grid-divider>[class*=uk-width-large-]:not(.uk-width-large-1-1):nth-child(n+2) {
+        border-left: 1px solid rgba(221, 221, 221, 0.2);
+    }
+}
+@media (max-width: 767px) {
+    .sppb-addon-image-content .sppb-image-holder {
+        position: inherit;
+        width: 100%!important;
+        height: 300px;
+    }
+    .tc-footer {
+        font-size: 11px;
+    }
+    .tc-footer .tc-totopscroll {
+        left: auto;
+        right: 0;
+    }
+    .tc-slider {
+        zoom: 0.7;
+    }
+}
+@media (max-width: 420px) {
+    .tc-slider {
+        zoom: 0.6;
+    }
+    .sldr-title-large {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+    .sldr-para25 {
+        font-size: 13px;
+        line-height: normal;
+    }
+    .sldr-title-medium {
+        font-size: 24px;
+        line-height: normal;
+    }
+}
